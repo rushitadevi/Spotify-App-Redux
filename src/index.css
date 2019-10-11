@@ -5,9 +5,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(46,63,87);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.signup-Btn{
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 180px;
+}
+.login-Btn{
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 180px;
+}
+
+.nav-btn{
+  margin-bottom:100px;
+}
+
+.nav-link{
+  color:white;
+  font-weight: bold;
+
+}
+
+.nav-link:hover{
+  border:1px solid crimson;
+  border-width: 0px 0px 0px 4px;
+  color:greenyellow;
 }
