@@ -1,10 +1,13 @@
 import React from "react";
-import { Container } from "reactstrap";
 import DisplayMovies from "./DisplayMovies"
 import Album from "./Album"
+import SpotifyLogo from "../logo/Spotify_Logo.png";
+import NextButton from "../PlayerButtons/Next.png"
+import prevoiusButton from "../PlayerButtons/Previous.png"
+import playButton from "../PlayerButtons/Play.png"
+import ShuffleButton from "../PlayerButtons/Shuffle.png"
+import RepeatButton from "../PlayerButtons/Repeat.png"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-//SSimport logo from './logo/';
-//import Shuffel from "../playerButtons/Next.png"
 
 class MainPage extends React.Component {
   render() {
@@ -14,7 +17,7 @@ class MainPage extends React.Component {
         <div className="row">
           <div className="col-md-2 fixed-left " style={{background:"black"}} >
               <div className="mt-4">
-                  <img  src={'logo/Spotify_Logo.png'}
+                  <img  src={SpotifyLogo}
                   alt="s"
                   width="131px"
                   height="40px"/>
@@ -23,7 +26,7 @@ class MainPage extends React.Component {
               className="nav-link flex-column  mt-4  "
               id="v-pills-tab"
               aria-orientation="vertical" >
-              <a className="nav-item nav-link" href="#">Home</a>
+             <Link to="/"> <a className="nav-item nav-link" href="#">Home</a></Link>
               <a className="nav-item nav-link" href="#">Search</a>
               <a className="nav-item nav-link" href="#">Your Library</a>
               <a className="nav-item nav-link" href="#">Your Albums</a>
@@ -42,51 +45,44 @@ class MainPage extends React.Component {
           </div>
           <div className="container" >
           <div className="row centering" id="mainShow">
-            <div className="col-10 mainPage">
+            <div className="col-10 mainPage mt-4">
                 <div className="row">
-                <div className="mainLinks">
-                <a href="#">TRENDING</a>
-                <a href="#"> PODCAST</a>
-                <a href="#">MOODS AND GENRES</a>
-                <a href="#">NEW RELEASES</a>
-                <a href="#">DISCOVER</a>
+                <div >
+                <a className="mainLinks" href="#">TRENDING   </a>
+                <a className="mainLinks" href="#"> PODCAST  </a>
+                <a className="mainLinks" href="#">MOODS AND GENRES  </a>
+                <a  className="mainLinks" href="#">NEW RELEASES  </a>
+                <a className="mainLinks" href="#">DISCOVER  </a>
               </div>
-           
                 </div>
-                <div>
-                 
+                <div className="mt-5">
                 <Route  path="/" exact  component={DisplayMovies}/>
                 <Route  path="/Album/:id" exact  component={Album}/>
                 </div>
-                
-               
-              
-                
-             
             </div>
           </div>
                   </div>
         </div>
       </div>
-      <div className="container-fluid  " style={{height:"100px",background:"pink"}} >
+      <div className="container-fluid  " style={{height:"100px",background:"black"}} >
          
           <div className="row justify-content-center  py-3">
           <div class="row">
                 <div class="col-12 playerControls text-center">
                     <a href="#">
-                        <img src={'./PlayerButtons/Next.png'} alt="shuffle"/>
+                        <img src={NextButton} alt="shuffle" style={{width:"20px"}} />
                     </a>
                     <a href="#">
-                        <img src={'../PlayerButtons/previous.png'} alt="shuffle"/>
+                        <img src={prevoiusButton} alt="shuffle" style={{width:"20px"}}/>
                     </a>
                     <a href="#">
-                        <img src="PlayerButtons/Play.png" alt="shuffle"/>
+                        <img src={playButton} alt="shuffle" style={{width:"20px"}}/>
                     </a>
                     <a href="#">
-                        <img src="PlayerButtons/Next.png" alt="shuffle"/>
+                        <img src={NextButton} alt="shuffle" style={{width:"20px"}}/>
                     </a>
                     <a href="#">
-                        <img src="PlayerButtons/Repeat.png" alt="shuffle"/>
+                        <img src={RepeatButton} alt="shuffle" style={{width:"20px"}}/>
                     </a>
                 </div>
          

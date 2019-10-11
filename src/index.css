@@ -36,11 +36,19 @@ code {
 .nav-link{
   color:white;
   font-weight: bold;
-
 }
 
-.nav-link:hover{
+.nav-item.nav-link:hover{
   border:1px solid crimson;
   border-width: 0px 0px 0px 4px;
   color:greenyellow;
+}
+
+.mainLinks {
+  color : white;
+  font-weight : bold
+}
+
+.mainLinks:hover {
+  color : yellowgreen
 }
